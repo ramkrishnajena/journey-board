@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Journey Board</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img
+          src="https://deepthought.education/assets/images/logo/logo.svg"
+          alt="logo"
+        />
+        <div class="header__right">
+          <ul>
+            <li>
+              <img src="./asset/home.svg" alt="home" />
+            </li>
+            <li>
+              <img src="./asset/setting.svg" alt="setting" />
+            </li>
+            <li>
+              <img src="./asset/bell.svg" alt="bell" />
+            </li>
+          </ul>
+          <div class="header__right--profile">
+            <img src="./asset/profile.png" alt="profile" />
+          </div>
+          <div class="header__right--menu">
+            <img src="./asset/menu.svg" alt="menu" />
+          </div>
+        </div>
+      </header>
+      <section class="body">
+        <div class="body__left-slider">
+          <div class="body__left-slider-head"></div>
+          <div class="body__left-slider-notification">
+            <p id="notification__count">1</p>
+          </div>
+        </div>
+        <div class="body__right-content">
+          <div class="body__right-content--head">
+            <h2 id="title"></h2>
+            <button>Submit Task</button>
+          </div>
+          <div class="body__right-content-task">
+            <h4 id="project-title"></h4>
+            <p id="project-description"></p>
+          </div>
+          <div class="body__right-content-box">
+            <!-- <div class="task-container-box">
+              <div class="task-head">
+                <div class="task-title" id="task-title"></div>
+                <div class="task-icon">i</div>
+              </div>
+              <div class="task-body">
+                <p>Description:</p>
+                <p class="task-description" id="task-description"></p>
+              </div>
+            </div> -->
+            <div class="content-box one" id="content-box">
+              <!-- <h5 id="asset_title">
+                Technical Project Management <span class="info">i</span>
+              </h5>
+              <div>
+                <span>Description:</span>
+                <p id="">
+                  Story of Alignment Scope of Agility Specific Accountable
+                  Staggering Approach
+                </p> -->
+              </div>
+              <img src="/asset/video.jpg" />
+            </div>
+            <div class="content-box two" >
+              <h5>Threadbuild<span class="info">i</span></h5>
+              <p>
+                <span>Description:</span>Watch the video and threadbuild, and
+                jot out key threads while watching the video
+              </p>
+              <div class="content-box__thread">
+                <p>
+                  <span><img src="./asset/up-arrow.svg" alt="up-arrow" /></span>
+                  Thread A
+                </p>
+                
+              </div>
+            </div>
+            <div class="content-box three">
+              <h5>Structure your Pointers <span class="info">i</span></h5>
+              <p>
+                <span>Description:</span>Write a 300 - 400 word article from
+                your thread . Publish your understanding and showcase your
+                understanding to the entire world
+              </p>
+              <div class="structure">
+                <div class="structure-title">
+                  <p>Title</p>
+                  <input type="text" name="title" />
+                </div>
+                <div class="structure-content">
+                  <p>Content</p>
+                  <div class="content-edit-options">
+                    <p>File</p>
+                    <p>Edit</p>
+                    <p>View</p>
+                    <p>Insert</p>
+                    <p>Format</p>
+                    <p>Tools</p>
+                    <p>Table</p>
+                    <p>Help</p>
+                    <p><img src="./asset/undo.svg" /></p>
+                    <p><img src="./asset/redo.svg" /></p>
+                    <p><img src="./asset/expand.svg" /></p>
+                    <p>paragraph</p>
+                    <p>...</p>
+                  </div>
+                  <input type="text" name="content" />
+                </div>
+              </div>
+            </div>
+            <div class="content-box four">
+              <h5>4SA Method<span class="info">i</span></h5>
+              <p><span>Description:</span>To Explore more read more</p>
+              <div class="content-box__thread-close one">
+                <p>
+                  <span><img src="./asset/up-arrow.svg" alt="up-arrow" /></span>
+                  Introduction
+                </p>
+                <div class="thread-close one">
+                  <p>The 4SA Method , How to bring a idea into progress ?</p>
+                  <p>See More</p>
+                </div>
+              </div>
+              <div class="content-box__thread-close two">
+                <p>
+                  <span><img src="./asset/up-arrow.svg" alt="up-arrow" /></span>
+                  Thread A
+                </p>
+                <div class="thread-close two">
+                  <p>
+                    How are you going to develop your stratergy ? Which method
+                    are you going to use to develop a stratergy ? What if the
+                    project is lengthy?
+                  </p>
+                  <p>See More</p>
+                </div>
+              </div>
+              <div class="example">
+                <p>Example 1</p>
+                <p>You have a concept , How will you put into progress?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="notice-board">
+        <div class="notice-board__btn">
+          <p><span>X</span>Notice Board</p>
+        </div>
+        <div class="notification-board_list"></div>
+      </div>
+      <div class="floating-icons">
+        <img src="./asset/question-float.svg" />
+        <img src="./asset/meeting.svg" />
+        <img src="./asset/calender.svg" />
+      </div>
+    </div>
+    
+  </body>
+</html>
