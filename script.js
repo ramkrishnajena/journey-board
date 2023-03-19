@@ -16,7 +16,7 @@ const url =
   "https://dev.deepthought.education/assets/uploads/files/files/others/ddugky_project.json";
 const getApiData = async (url) => {
   try {
-    const callApi = await fetch("./deepthoughts.json");
+    const callApi = await fetch(url);
     const responce = await callApi.json();
 
     return responce;
