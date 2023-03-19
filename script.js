@@ -5,6 +5,12 @@ const projectDescription = document.getElementById("project-description");
 const taskTitle = document.getElementById("task-title");
 const taskDescription = document.getElementById("task-description");
 const bodyContainer = document.getElementById("task-container");
+const notificationContainer = document.querySelector(".body__left-slider");
+const notificationBody = document.querySelector(
+  ".body__left-slider-notification"
+);
+const closeNotification = document.getElementById("close-notification");
+const notification = document.getElementById("notification__count");
 
 const url =
   "https://dev.deepthought.education/assets/uploads/files/files/others/ddugky_project.json";
@@ -18,6 +24,7 @@ const getApiData = async (url) => {
     console.log(error);
   }
 };
+
 const populateApi = async () => {
   const ApiData = await getApiData();
   const taskArray = ApiData.tasks[0];
@@ -28,7 +35,21 @@ const populateApi = async () => {
     projectTitle.innerText = task.task_title;
     projectDescription.innerText = task.task_description;
   });
+  // onclick show task notification
 
+  closeNotification.addEventListener("click", () => {
+    notificationContainer.classList.remove("notice-on");
+    notificationBody.innerHTML = `<p id="notification__count">1</p>`;
+  });
+  let li = `<li>${taskArray.task_title}</li>`;
+
+  notification.addEventListener("click", () => {
+    notificationContainer.classList.add("notice-on");
+    notificationBody.innerHTML = `<ul class="notification-ul">${li}</ul>`;
+  });
+  for (const list of taskList) {
+    li += `<li>${list.asset_title}</li>`;
+  }
   let box = taskList.map((list, i) => {
     return `
     <div class="task-container-box ${list.asset_content_type + i}">
@@ -146,7 +167,6 @@ const populateApi = async () => {
             </div>   
     `;
   });
-
   bodyContainer.innerHTML += box;
 };
 
