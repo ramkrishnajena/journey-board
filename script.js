@@ -26,7 +26,7 @@ const getApiData = async (url) => {
 };
 
 const populateApi = async () => {
-  const ApiData = await getApiData();
+  const ApiData = await getApiData(url);
   const taskArray = ApiData.tasks[0];
   const taskList = taskArray.assets;
   title.innerText = ApiData.title;
