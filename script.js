@@ -17,8 +17,10 @@ const url =
 const getApiData = async (url) => {
   try {
     const callApi = await fetch(url);
+    console.log("hi20");
+    console.log(await callApi.blob());
     const responce = await callApi.json();
-
+    console.log("hi21");
     return responce;
   } catch (error) {
     console.log(error);
@@ -27,6 +29,7 @@ const getApiData = async (url) => {
 
 const populateApi = async () => {
   const ApiData = await getApiData(url);
+  console.log("hi22");
   const taskArray = ApiData.tasks[0];
   const taskList = taskArray.assets;
   title.innerText = ApiData.title;
